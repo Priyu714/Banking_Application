@@ -6,4 +6,8 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface otpInfoRepository extends JpaRepository<OtpInfo, Long> {
+
+    OtpInfo findByAccountNumberAndOtp(String accountNumber, String otp);
+
+    OtpInfo findByAccountNumber(String accountNumber);
 }
